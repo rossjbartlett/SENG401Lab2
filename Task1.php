@@ -1,6 +1,5 @@
-
 <?php
-header('Content-Type: application/json'); // allow JSON_PRETTY_PRINT, must be before any ECHOs
+//header('Content-Type: application/json'); // allow JSON_PRETTY_PRINT, must be before any ECHOs
 
 /*
 a program in PHP to convert a GeoJSON file
