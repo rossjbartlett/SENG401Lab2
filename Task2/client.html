@@ -1,0 +1,48 @@
+<html>
+
+<head>
+	<title> Client Convert Web Page </title>	
+
+<style>
+
+.button {
+  background-color: #E24620;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+ /*margin: 4px 2px;*/
+  margin-left: 45%;
+  cursor: pointer;
+}
+
+</style>
+</head>	
+
+<body>
+
+	<div id="toDisplay">
+		<h1 style= "text-align: center; padding-top: 50px;"> Let's convert a GeoJSON to an Array and back! </h1>
+		<button class="button" onclick="triggerConversion()" type="button"> Convert! </button>
+	</div>
+</body>
+
+<script>
+
+function triggerConversion() {
+  var xhttp = new XMLHttpRequest();
+	xhttp.onreadystatechange = function() {
+    	if (this.readyState == 4 && this.status == 200) {
+      		 document.getElementById("toDisplay").innerHTML = this.responseText;
+    	}
+  };
+   xhttp.open("GET", "Task1.php", true);
+   xhttp.send();
+}
+
+</script>
+
+</html>
