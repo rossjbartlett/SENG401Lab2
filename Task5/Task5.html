@@ -2,42 +2,24 @@
 <html>
 
 <head>
+<link rel="stylesheet" href="./../stylesheets/form_styles.css">
 	<title> Form Web Page </title>
 
-<style>
-
-.input {
-	padding: 2px 50px;
-	width: 10%;
-	background-color: #E1E1E0;
-}
-
-form {
-	border: 4px solid #E24620;
-	text-align: center;
-	display: inline-block;
-	margin-left: 35%;
-}
-
-.button {
-	text-align: center;
-}
-
-</style>
 
 </head>
 
 <body>
 	<br>
-
+<div id="form_div">
 <form method=POST>
   Latitude of point 1: <input type="text" id="latitude1" class="input"><br>
   Longitude of point 1: <input type="text" id="longitude1" class="input"><br>
   Latitude of point 2: <input type="text" id="latitude2" class="input"><br>
   Longitude of point 2: <input type="text" id="longitude2" class="input"><br>
-  <input type="button"/ onclick="triggerConversion()" value="submit"><br>
+  <input type="button" onclick="triggerConversion()" value="Submit"><br>
 
 </form>
+</div>
 <br>
 <div id="result" ></div>
 
@@ -61,6 +43,15 @@ function triggerConversion() {
 				"&latitude2="+ document.getElementById("latitude2").value +
 				"&longitude2="+ document.getElementById("longitude2").value);
 }
+
+$(document).ready(function() {
+    $('form').keydown(function(event) {
+        if (event.which == 13) {
+            this.form.submit();
+            event.preventDefault();
+         }
+    });
+});
 
 </script>
 
