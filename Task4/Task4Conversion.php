@@ -12,7 +12,7 @@ $bearing = "";
 $geodesic= "";
 
 //check if any field was left blank or if there was non numeric values
-if( empty($latitude1) || empty($latitude2)|| empty($longitude1) || empty($longitude2) || !is_numeric($latitude1) || !is_numeric($latitude2) || !is_numeric($longitude1) || !is_numeric($longitude2)){
+if( !isset($latitude1) || !isset($latitude2) || !isset($longitude1) || !isset($longitude2) || !is_numeric($latitude1) || !is_numeric($latitude2) || !is_numeric($longitude1) || !is_numeric($longitude2)){
   echo "<script type='text/javascript'>
       alert('A field was left blank or had invalid characters, please try again!!')
       window.location = 'Task4.html';</script>";
