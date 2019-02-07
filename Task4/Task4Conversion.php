@@ -89,6 +89,7 @@ if (!$outRange && !$null){
 
 }
 
+// appropriate error messages in javascript alerts
 if ($null){
   $null = FALSE;
   $outRange = FALSE;
