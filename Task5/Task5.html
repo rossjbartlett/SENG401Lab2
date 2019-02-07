@@ -51,13 +51,15 @@ function triggerConversion() {
     	if (this.readyState == 4 && this.status == 200) {
       		 document.getElementById("result").innerHTML = this.responseText;
     	}
-  };
-   xhttp.open("POST", "Task5Conversion.php", true);
-	 xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-	 xhttp.send("latitude1="+ document.getElementById("latitude1").value +
-	 						"&longitude1="+ document.getElementById("longitude1").value +
-							"&latitude2="+ document.getElementById("latitude2").value +
-							"&longitude2="+ document.getElementById("longitude2").value);
+	};
+    xhttp.open("POST", "Task5Conversion.php", true);
+	//Send the proper header information along with the request
+	xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded"); 
+	//send the values in each of the input forms
+	xhttp.send("latitude1="+ document.getElementById("latitude1").value +
+				"&longitude1="+ document.getElementById("longitude1").value +
+				"&latitude2="+ document.getElementById("latitude2").value +
+				"&longitude2="+ document.getElementById("longitude2").value);
 }
 
 </script>

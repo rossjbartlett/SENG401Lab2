@@ -13,9 +13,7 @@ $geodesic= "";
 
 //check if any field was left blank or if there was non numeric values
 if( !isset($latitude1) || !isset($latitude2) || !isset($longitude1) || !isset($longitude2) || !is_numeric($latitude1) || !is_numeric($latitude2) || !is_numeric($longitude1) || !is_numeric($longitude2)){
-  echo "<script type='text/javascript'>
-      alert('A field was left blank or had invalid characters, please try again!!')
-      window.location = 'Task4.html';</script>";
+  echo "<br>Error: A field was left blank or had invalid characters, please try again!!";
   die(); //dont do anything else.
 }
 
@@ -28,9 +26,7 @@ $longitude2 = (float)$longitude2;
 //check if any field was out of longitude or latitude range
 if (($latitude1>90 || $latitude1<-90) || ($latitude2>90 || $latitude2<-90) || ($longitude1>180 || $longitude1<-180) || ($longitude2>180 || $longitude2<-180)){
   //inputs are out of range
-  echo "<script type='text/javascript'>
-      alert('Parameters not in range, please try again! Latitudes should be between -90 and +90 and longitudes between -180 and +180')
-      window.location = 'Task4.html';</script>";
+  echo "<br>Error: Parameters not in range, please try again! Latitudes should be between -90 and +90 and longitudes between -180 and +180";
   die();
 }
 
