@@ -5,17 +5,13 @@ body{
 }
 
 #form_div{
-	width: 60%;
-	align-content: center;
-	margin-left: 20%;
+	text-align: center;
 }
 
 form{
-	padding-left: 5%;
 	border: 4px solid #E8E9EC;
 	text-align: center;
 	display: inline-block;
-	width: 90%;
 }
 
 input[type=text]{
@@ -51,7 +47,7 @@ input[type=submit]:hover{
 
 
 input[type=button]{
-	width: 50%;
+	width: 30%;
 	padding: 2% 5%;
 	margin: 3% 0px;
 	radius: 10px;
